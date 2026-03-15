@@ -1,0 +1,13 @@
+parameters:
+    level: 6                       # 0 (locker) bis 9 (streng) – gut für den Start
+    paths:
+        - app
+        - config
+        - database
+        - routes
+    excludePaths:
+        - vendor
+        - storage
+        - bootstrap/cache
+    checkMissingIterableValueType: false
+    reportUnmatchedIgnoredErrors: false
