@@ -1,0 +1,342 @@
+/* WP Media Archive - Frontend Styles */
+
+/* Grid Layout */
+.wpma-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+.wpma-columns-2 { grid-template-columns: repeat(2, 1fr); }
+.wpma-columns-3 { grid-template-columns: repeat(3, 1fr); }
+.wpma-columns-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+    .wpma-columns-2,
+    .wpma-columns-3,
+    .wpma-columns-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .wpma-columns-2,
+    .wpma-columns-3,
+    .wpma-columns-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Archive Header */
+.wpma-archive-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+.wpma-archive-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.wpma-archive-description {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Filter & Search */
+.wpma-filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.wpma-search-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+.wpma-filter-select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background: #fff;
+}
+.wpma-search-btn {
+    padding: 0.6rem 1.5rem;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+.wpma-search-btn:hover {
+    background: #005a87;
+}
+.wpma-search-form .wpma-search-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+.wpma-filter-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Tag Cloud */
+.wpma-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.wpma-tag-cloud .wpma-tag-link {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #f0f0f0;
+    color: #333;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.2s, color 0.2s;
+}
+.wpma-tag-cloud .wpma-tag-link:hover {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* Cards */
+.wpma-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+}
+.wpma-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.wpma-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.wpma-card__media {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wpma-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wpma-card__audio-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+.wpma-card__placeholder {
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+}
+.wpma-card__body {
+    padding: 1rem;
+}
+.wpma-card__title {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+}
+.wpma-card__meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 0.25rem;
+}
+.wpma-card__date {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0 0 0.5rem;
+}
+.wpma-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+}
+
+/* Tags */
+.wpma-tag {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    background: #e8f0fe;
+    color: #1a73e8;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+a.wpma-tag:hover {
+    background: #1a73e8;
+    color: #fff;
+}
+
+/* Single View */
+.wpma-single {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+.wpma-single__title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+.wpma-single__meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+.wpma-single__type {
+    background: #0073aa;
+    color: #fff;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+.wpma-single__content {
+    margin-bottom: 2rem;
+}
+.wpma-single__figure {
+    margin: 0 0 2rem;
+}
+.wpma-single__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.wpma-single__caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+.wpma-single__player {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.wpma-audio-player {
+    width: 100%;
+}
+.wpma-single__duration {
+    color: #fff;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+.wpma-single__description {
+    margin: 1.5rem 0;
+}
+.wpma-single__info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1.5rem;
+    margin: 1.5rem 0;
+}
+.wpma-single__info dt {
+    font-weight: 600;
+    color: #333;
+}
+.wpma-single__info dd {
+    margin: 0;
+    color: #555;
+}
+.wpma-single__tags {
+    margin-top: 2rem;
+}
+.wpma-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.wpma-category-link {
+    color: #0073aa;
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+.wpma-category-link:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+.wpma-single__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+}
+.wpma-nav-link {
+    color: #0073aa;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.wpma-nav-link:hover {
+    text-decoration: underline;
+}
+.wpma-nav-link--archive {
+    font-weight: 600;
+}
+
+/* Pagination */
+.wpma-pagination {
+    margin-top: 2rem;
+    text-align: center;
+}
+.wpma-pagination .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.wpma-pagination .page-numbers {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+.wpma-pagination .page-numbers.current {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* No Results */
+.wpma-no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #666;
+    font-size: 1.1rem;
+}

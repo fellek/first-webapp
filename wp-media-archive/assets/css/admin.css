@@ -1,0 +1,35 @@
+/* WP Media Archive - Admin Styles */
+
+.wpma-meta-table {
+    width: 100%;
+}
+.wpma-meta-table th {
+    width: 160px;
+    padding: 10px 10px 10px 0;
+}
+.wpma-meta-table td {
+    padding: 10px 0;
+}
+.wpma-meta-table .regular-text {
+    width: 100%;
+    max-width: 400px;
+}
+.wpma-meta-table .large-text {
+    width: 100%;
+}
+.wpma-file-upload {
+    padding: 10px 0;
+}
+.wpma-file-preview {
+    margin-bottom: 10px;
+    min-height: 40px;
+}
+.wpma-file-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.wpma-no-file {
+    color: #999;
+    font-style: italic;
+}
